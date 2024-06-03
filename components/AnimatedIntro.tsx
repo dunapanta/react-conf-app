@@ -1,6 +1,6 @@
 //import Colors from "@/constants/Colors";
 import { memo } from "react";
-import { StyleSheet, useWindowDimensions } from "react-native";
+import { StyleSheet, useWindowDimensions, Text, Image } from "react-native";
 import Animated, {
   interpolate,
   interpolateColor,
@@ -15,29 +15,34 @@ import { ReText } from "react-native-redash";
 
 const content = [
   {
-    title: "Let's create.",
+    title: "Daniel",
     bg: "#D7FFD4",
     fontColor: "#F655FF",
+    //image: require("../assets/images/ec.png"),
   },
   {
-    title: "Let's brainstorm.",
+    title: "Unapanta",
     bg: "#29271D",
     fontColor: "#E5EDFF",
+    //image: require("../assets/images/pe.png"),
   },
   {
-    title: "Let's discover.",
+    title: "Vamos a crear una app chevere",
     bg: "#EF580B",
     fontColor: "#0000FA",
+    //image: require("../assets/images/ec.png"),
   },
   {
-    title: "Let's go.",
+    title: "con inteligencia artificial",
     bg: "#0E4D45",
     fontColor: "#FCBB80",
+    //image: require("../assets/images/pe.png"),
   },
   {
-    title: "ChatGPT.",
+    title: "de historias pepa candela...",
     bg: "#172E15",
     fontColor: "#F655FF",
+    //image: require("../assets/images/ec.png"),
   },
 ];
 
@@ -188,6 +193,18 @@ const AnimatedIntro = () => {
 
   return (
     <Animated.View style={[styles.wrapper, style1]}>
+      <Animated.Image
+        source={require("../assets/images/pe.png")}
+        style={{
+          width: "100%",
+          height: "100%",
+          resizeMode: "cover",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          opacity: 0.3,
+        }}
+      />
       <Animated.View style={[styles.content]}>
         <Animated.View style={[styles.ball, ballStyle]} />
         <Animated.View style={[styles.mask, mask]} />
