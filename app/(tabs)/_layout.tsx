@@ -98,6 +98,30 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="gpt"
+        options={{
+          headerStyle: {
+            backgroundColor: tabBarBackgroundColor,
+          },
+          headerShown: false,
+          headerTitle: () => (
+            <ThemedText fontSize={20} fontWeight="bold">
+              Speakers
+            </ThemedText>
+          ),
+          tabBarButton: (props) => (
+            <TabBarButton
+              {...props}
+              activeTintColor={tabBarActiveTintColor}
+              inactiveTintColor={tabBarInactiveTintColor}
+              icon={({ color }) => (
+                <Ionicons name="documents" size={24} color={color} />
+              )}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="info"
         options={{
           headerStyle: {
