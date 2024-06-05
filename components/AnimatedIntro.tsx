@@ -15,31 +15,31 @@ import { ReText } from "react-native-redash";
 
 const content = [
   {
-    title: "Daniel",
+    title: "Aqui va el titulo",
     bg: "#D7FFD4",
     fontColor: "#F655FF",
     //image: require("../assets/images/ec.png"),
   },
   {
-    title: "Unapanta",
+    title: "Una mas aqui",
     bg: "#29271D",
     fontColor: "#E5EDFF",
     //image: require("../assets/images/pe.png"),
   },
   {
-    title: "Vamos a crear una app chevere",
+    title: "Vamos a crear",
     bg: "#EF580B",
     fontColor: "#0000FA",
     //image: require("../assets/images/ec.png"),
   },
   {
-    title: "con inteligencia artificial",
+    title: "inteligencia artificial",
     bg: "#0E4D45",
     fontColor: "#FCBB80",
     //image: require("../assets/images/pe.png"),
   },
   {
-    title: "de historias pepa candela...",
+    title: "pepa candela...",
     bg: "#172E15",
     fontColor: "#F655FF",
     //image: require("../assets/images/ec.png"),
@@ -193,7 +193,7 @@ const AnimatedIntro = () => {
 
   return (
     <Animated.View style={[styles.wrapper, style1]}>
-      <Animated.Image
+      {/* <Animated.Image
         source={require("../assets/images/pe.png")}
         style={{
           width: "100%",
@@ -204,9 +204,27 @@ const AnimatedIntro = () => {
           left: 0,
           opacity: 0.3,
         }}
-      />
+      /> */}
       <Animated.View style={[styles.content]}>
-        <Animated.View style={[styles.ball, ballStyle]} />
+        <Animated.View
+          style={[
+            styles.ball,
+            ballStyle,
+            { justifyContent: "center", alignItems: "center" },
+          ]}
+        >
+          <Animated.Image
+            source={require("../assets/images/book.png")}
+            tintColor={ballStyle.backgroundColor}
+            style={{
+              width: 36,
+              height: 26,
+              resizeMode: "cover",
+
+              opacity: 0.3,
+            }}
+          />
+        </Animated.View>
         <Animated.View style={[styles.mask, mask]} />
         <ReText
           onLayout={(e) => {
@@ -231,11 +249,11 @@ const styles = StyleSheet.create({
     height: 44,
   },
   ball: {
-    width: 40,
+    width: 46,
     zIndex: 10,
     height: 40,
     backgroundColor: "#000",
-    borderRadius: 20,
+    borderRadius: 4,
     position: "absolute",
     left: "0%",
   },
